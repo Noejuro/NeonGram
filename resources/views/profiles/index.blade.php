@@ -7,15 +7,18 @@
             <img src="https://instagram.fagu1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/74636020_1223377094520563_9014301889403027456_n.jpg?_nc_ht=instagram.fagu1-1.fna.fbcdn.net&_nc_ohc=7V-wp8sDRawAX_YnPFM&oh=d103a4754c3ddb3bd7185c1426b83601&oe=5F7E247C" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class="d-flex justify-content-between">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex " style="font-size: 16px">
                 <div class="pr-5"><strong>10</strong> posts</div>
                 <div class="pr-5"><strong>128.3M</strong> followers</div>
                 <div class="pr-5"><strong>206</strong> following</div>
             </div>
-            <div style="font-size: 16px" class="pt-4"><strong>Noé Alejandro 🍫</strong></div>
-            <div style="font-size: 16px">Ing. en Computación Inteligente UAA 👨🏻‍💻</div>
-            <div style="font-size: 16px"> "Siempre estás a una decisión de cambiar completamente tu vida" ⏰</div>
+            <div style="font-size: 16px" class="pt-4"><strong>{{ $user->profile->title }}</strong></div>
+            <div style="font-size: 16px">{{ $user->profile->description }}</div>
+            <div style="font-size: 14px; color: blue"><a href="#"> {{ $user->profile->url ?? 'Your link' }} </a></div>
         </div>
     </div>
     <div class="row pt-5">
